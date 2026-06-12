@@ -2,6 +2,8 @@
 
 A vibrant platform for creative professionals to showcase their work, collaborate with peers, discover opportunities, and get AI-powered guidance.
 
+**🌐 Live Demo:** https://creativa-595735741714.asia-southeast1.run.app/
+
 ## 🤖 Built with GitHub Copilot
 
 This project was built with extensive assistance from **GitHub Copilot**, which helped with:
