@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --color-primary: #dc2626; /* Vibrant Red */
+  --color-primary-light: #fef2f2; /* Pure rose-white accent */
+  --color-status-teal: #10b981; /* Green status */
+  --color-status-coral: #dc2626; /* Consistent red accent */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fbfafb; /* High-contrast snowy clean grey-white background */
+  color: #111827;
+}
+
+/* Custom Bento Grid Styles matching the Design Template exactly */
+.bento-card {
+  background: white;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.03);
+  border: 1px solid rgba(220, 38, 38, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card-interactive {
+  background: white;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.03);
+  border: 1px solid rgba(220, 38, 38, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.bento-card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(220, 38, 38, 0.06);
+  border-color: rgba(220, 38, 38, 0.25);
+}
+
+.bento-category-pill {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.bento-gradient-text {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom hide scrollbars utilities */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Liquid flow animation for CR */
+.text-liquid {
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='%23000000' d='M0,100 C50,140 50,60 100,100 C150,140 150,60 200,100 L200,200 L0,200 Z'/%3E%3C/svg%3E") repeat-x 0 100%,
+    linear-gradient(to top, #000000 0%, #000000 30%, #ffffff 30%, #ffffff 100%);
+  background-size: 60px 60px, 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #000000;
+  animation: liquid-wave-anim 2s infinite linear;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+@keyframes liquid-wave-anim {
+  0% {
+    background-position: 0px 80%, 0 0;
+  }
+  50% {
+    background-position: 30px 60%, 0 0;
+  }
+  100% {
+    background-position: 60px 80%, 0 0;
+  }
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "Creativa",
+  "description": "A professional network for creatives combining a Pinterest-style discovery feed, LinkedIn-style connections, real-time chat, and hiring workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
